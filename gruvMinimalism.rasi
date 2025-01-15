@@ -1,0 +1,122 @@
+configuration {
+    drun {
+        display-name: " ";
+    }
+    timeout {
+        delay: 5;
+        action: "kb-cancel";
+    }
+    me-select-entry: ""; 
+    icon-theme: "Papirus";
+    show-icons: true;
+    fixed-num-lines: false;
+    font: "JetBrainsMono Nerd Font Medium 9";
+}
+
+* {
+    bg: #282828;
+    bg-alt-1: #2E2E2E;
+    bg-alt-2: #99917f;
+    
+    text: #282828;
+    text-alt: #EBDBA1;
+    text-alt-2: rgba(235, 219, 161, 0.5);
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 15%;
+    border: 0;
+    border-radius: 5px;
+    background-color: @bg;
+    padding: 0.5em;
+}
+
+mainbox {
+    background-color: @bg;
+    border-radius: 5px;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: @bg;
+    text-color: @text-alt;
+    children: [prompt, entry, num-filtered-rows, textbox-custom, num-rows];
+}
+
+prompt {
+    background-color: inherit;
+    text-color: @text-alt;
+    padding: 0.5em 0.5em 0.5em 0;
+}
+
+entry {
+    background-color: inherit;
+    text-color: @text-alt;
+    placeholder: "Run";
+    placeholder-color: @text-alt-2;
+    padding: 0.5em 0 0.5em 0;
+}
+
+textbox-custom{
+    background-color: inherit;
+    text-color: @text-alt-2;
+	content: "/";
+	padding: 0.2em;
+    expand: false;
+}
+
+num-filtered-rows, num-rows {
+    background-color: inherit;
+    text-color: @text-alt;
+}
+
+prompt, entry, element-icon, element-text, num-filtered-rows, case-indicator, num-rows, textbox-custom {
+    vertical-align: 0.5;
+}
+
+listview {
+    background-color: inherit;
+    padding: 0.5em 0 0.5em 0;
+    lines: 5;
+    children: [element, scrollbar];
+    scrollbar: true;
+    fixed-height: false;
+    dynamic: false; /*True if the size should change when filtering the list, False if it should
+         keep the original height.*/
+    fixed-columns: true;
+}
+
+scrollbar {
+    background-color: @bg-alt-1;
+    handle-color: @bg-alt-2;
+    margin: 0 0 0 0.5em;
+    border-radius: 1em;
+}
+
+element-icon {
+    background-color: @bg;
+    padding: 0 0.5em 0 0;
+}
+
+element selected {
+    background-color: @bg;
+    text-color: @text;
+}
+
+element-text {
+    background-color: @bg;
+    text-color: @text-alt;
+    padding: 0.25em 0.2em 0.25em 0.2em;
+}
+
+element-text selected {
+    background-color: @bg-alt-2;
+    text-color: @text;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    border-radius: 5px;
+}
