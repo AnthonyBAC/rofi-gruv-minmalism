@@ -10,7 +10,7 @@ configuration {
     icon-theme: "Papirus";
     show-icons: true;
     fixed-num-lines: false;
-    font: "JetBrainsMono Nerd Font Medium 9";
+    font: "JetBrainsMono Nerd Font Bold 9";
 }
 
 * {
@@ -93,7 +93,7 @@ listview {
 
 scrollbar {
     background-color: @bg-alt-1;
-    handle-color: @bg-alt-2;
+    handle-color: @text-alt;
     margin: 0 0 0 0.5em;
     border-radius: 1em;
 }
@@ -115,7 +115,7 @@ element-text {
 }
 
 element-text selected {
-    background-color: @bg-alt-2;
+    background-color: @text-alt;
     text-color: @text;
     padding: 0.2em 0.2em 0.2em 0.2em;
     border-radius: 5px;
