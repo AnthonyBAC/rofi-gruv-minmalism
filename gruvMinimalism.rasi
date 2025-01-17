@@ -14,13 +14,15 @@ configuration {
 }
 
 * {
-    bg: #282828;
+    bg: #262828;
     bg-alt-1: #2E2E2E;
+    bg-dark: #1D2021;
     bg-alt-2: #99917f;
-    
+    border-tp: rgba(235, 219, 161, 0.1);
     text: #282828;
     text-alt: #EBDBA1;
     text-alt-2: rgba(235, 219, 161, 0.5);
+    
 
     border: 0;
     margin: 0;
@@ -30,7 +32,8 @@ configuration {
 
 window {
     width: 15%;
-    border: 0;
+    border: 1;
+    border-color: @border-tp;
     border-radius: 5px;
     background-color: @bg;
     padding: 0.5em;
